@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Data Analyst</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #0f172a;
+            --primary-color: #0284c7; /* Azul analista */
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+        }
+        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: -0.5px; }
+        header p { margin: 0.7rem 0 0; font-size: 1.2rem; color: #94a3b8; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+        h2 { font-size: 1.8rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        
+        /* Cuadrícula de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        
+        /* Tarjetas */
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+        }
+        .project-image {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            background-color: #cbd5e1;
+        }
+        .project-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .project-content h3 { margin: 0 0 0.6rem 0; font-size: 1.3rem; color: #1e293b; }
+        .project-content p { font-size: 0.95rem; line-height: 1.6; color: #475569; flex-grow: 1; margin: 0 0 1rem 0; }
+        
+        .tech-tags { margin-bottom: 1.2rem; }
+        .tag {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.4rem;
+            margin-bottom: 0.4rem;
+            display: inline-block;
+        }
+        
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .btn:hover { background-color: #0369a1; }
+        
+        footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.95rem; border-top: 1px solid #e2e8f0; margin-top: 4rem; }
+        footer a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- PASO 3: CAMBIA TU NOMBRE AQUÍ -->
+        <h1>María Fernanda Soní</h1>
+        <p>Data Analyst</p>
+    </header>
+
+    <div class="container">
+        <h2>Portafolio de Proyectos</h2>
+        <div class="projects-grid">
+            
+            <!-- TARJETA REPETIBLE (AQUÍ VAN LOS 7 PROYECTOS) -->
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <img src="https://placehold.co" alt="Project 1" class="project-image">
+                <div class="project-content">
+                    <h3>RappiPlus: From Data to Business Decisions</h3>
+                    <p>An end-to-end analysis evaluating RappiPlus's business performance — data quality, profitability, conversion funnel, cohort retention, an A/B test, and a BI dashboard — to support data-driven decisions.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Python (pandas, NumPy, Matplotlib, statsmodels)</span>
+                        <span class="tag">SQL (PostgreSQL, vía SQLAlchemy)</span>
+                        <span class="tag">Power BI</span>
+                    </div>
+                    <a href="https://github.com/mfernandasoni/RappiPlus_from_data_to_business_decisions" class="btn" target="_blank">See Project</a>
+                </div>
+            </div>
+
+            <!-- Puedes copiar y pegar este bloque de arriba 7 veces, cambiando el número -->
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <img src="https://placehold.co" alt="Project 2" class="project-image">
+                <div class="project-content">
+                    <h3>Process Control Across 7 Diaper and Training Pants Production Lines</h3>
+                    <p>To implement automated data capture via tablets and develop a dashboard for real-time monitoring of critical variables, enabling to detect anomalies and implement corrective actions.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Google Sheets</span>
+                        <span class="tag">Google Apps Script</span>
+                        <span class="tag">Power BI</span>
+                    </div>
+                    <a href="https://github.com/mfernandasoni/process-control" class="btn" target="_blank">See project</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <img src="https://placehold.co" alt="Project 3" class="project-image">
+                <div class="project-content">
+                    <h3>Real Estate Commercial Performance Dashboard for Grupo Andes</h3>
+                    <p>The real estate sector needs to evaluate its commercial performance to understand its growth, profitability, and customer behavior. The request is to build an executive dashboard that enables analysis of sales, customers, and properties to support data-driven strategic decisions.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Power BI (Power Query, DAX: CALENDAR, ADDCOLUMNS, CALCULATE, time intelligence functions)</span>
+                    </div>
+                    <a href="https://github.com/mfernandasoni/Commercial-Performance-Dashboard-for-Grupo-Andes-Real-State" class="btn" target="_blank">See project</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 4 -->
+            <div class="project-card">
+                <img src="https://placehold.co" alt="Project 4" class="project-image">
+                <div class="project-content">
+                    <h3>Commercial Performance Dashboard for Andes Retail Group</h3>
+                    <p>A Tableau dashboard analyzing revenue evolution, profitability, and seasonality across regions, categories, and customer segments.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Excel</span>
+                    </div>
+                    <a href="https://github.com/mfernandasoni/commercial_performance_AndesRetail" class="btn" target="_blank">See project</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 5 -->
+            <div class="project-card">
+                <img src="https://placehold.co" alt="Project 5" class="project-image">
+                <div class="project-content">
+                    <h3>Exploring Behavioral Factors at NovaRetail+</h3>
+                    <p>NovaRetail+ is an e-commerce platform in Latin America with millions of users. As of the close of 2024, the Growth and Retention team wanted to answer one question: which customer behavior factors are most strongly associated with the annual revenue a customer generates?</p>
+                    <div class="tech-tags">
+                        <span class="tag">Python (pandas, NumPy, Seaborn, Matplotlib, SciPy)</span>
+                        <span class="tag">Jupyter Notebook</span>
+                    </div>
+                    <a href="https://github.com/mfernandasoni/Exploring_Behavioral_Factors_NovaRetail-" class="btn" target="_blank">See project</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 6 -->
+            <div class="project-card">
+                <img src="https://placehold.co" alt="Project 6" class="project-image">
+                <div class="project-content">
+                    <h3>Urban Mobility and Economic Productivity in LATAM Cities</h3>
+                    <p>To identify which cities to invest in transportation infrastructure in order to improve productivity and population well-being.</p>
+                    <div class="tech-tags">
+                        <span class="tag">Python (pandas, NumPy, Seaborn, Matplotlib)</span>
+                        <span class="tag">Jupyter Notebook</span>
+                    </div>
+                    <a href="https://github.com/mfernandasoni/Urban-Mobility-and-Economic-Productivity-in-LATAM-Cities" class="btn" target="_blank">See project</a>
+                </div>
+            </div>
+
+            <!-- PROJECT 7 -->
+            <div class="project-card">
+                <img src="https://placehold.co" alt="Project 7" class="project-image">
+                <div class="project-content">
+                    <h3>Funnel and Retention Analysis for MercadoLibre</h3>
+                    <p>Map the full conversion. Identify key drop-off points, and evaluate user retention by cohorts.</p>
+                    <div class="tech-tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Funnel and metric analysis</span>
+                    </div>
+                    <a href="https://github.com/mfernandasoni/funnel-retention-analysis-MercadoLibre" class="btn" target="_blank">See project</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <p>Conectemos en <a href="https://www.linkedin.com/in/mariafernandasoni-data-analyst/" target="_blank">LinkedIn</a></p>
+    </footer>
+
+</body>
+</html>
