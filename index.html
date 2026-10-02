@@ -1,230 +1,307 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Data Analyst</title>
-    <style>
-        :root {
-            --bg-color: #f8fafc;
-            --text-color: #0f172a;
-            --primary-color: #0284c7; /* Azul analista */
-            --card-bg: #ffffff;
-        }
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            text-align: center;
-            padding: 4rem 1rem;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-        }
-        header h1 { margin: 0; font-size: 2.8rem; letter-spacing: -0.5px; }
-        header p { margin: 0.7rem 0 0; font-size: 1.2rem; color: #94a3b8; }
-        
-        .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-        h2 { font-size: 1.8rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
-        
-        /* Cuadrícula de Proyectos */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-        
-        /* Tarjetas */
-        .project-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e2e8f0;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
-        }
-        .project-image {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            background-color: #cbd5e1;
-        }
-        .project-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        .project-content h3 { margin: 0 0 0.6rem 0; font-size: 1.3rem; color: #1e293b; }
-        .project-content p { font-size: 0.95rem; line-height: 1.6; color: #475569; flex-grow: 1; margin: 0 0 1rem 0; }
-        
-        .tech-tags { margin-bottom: 1.2rem; }
-        .tag {
-            background-color: #f1f5f9;
-            color: #334155;
-            padding: 0.25rem 0.6rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-right: 0.4rem;
-            margin-bottom: 0.4rem;
-            display: inline-block;
-        }
-        
-        .btn {
-            display: block;
-            text-align: center;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.75rem;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background 0.2s;
-        }
-        .btn:hover { background-color: #0369a1; }
-        
-        footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.95rem; border-top: 1px solid #e2e8f0; margin-top: 4rem; }
-        footer a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>María Fernanda Soní | Data Analyst Portfolio</title>
+<meta name="description" content="Data Analyst with a Mechatronics Engineering background. SQL, Python, Power BI, Tableau and Looker Studio. Turning messy data into clear insights and better processes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --header:#f1f1f1; --pill:#a08bcb; --ink:#14121c; --muted:#555064;
+  --accent:#4b30c8; --bg:#ffffff; --card:#f7f6fb; --line:#e3e0ee;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Montserrat,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--pill);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header{background:var(--header);position:relative;overflow:hidden}
+header svg{position:absolute;left:0;top:0;height:100%;width:46%;min-width:300px}
+.head{position:relative;display:flex;justify-content:flex-end;padding:64px 24px 40px}
+.head-inner{text-align:right;max-width:560px}
+.head h1{margin:0;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:800;line-height:1.1;color:#000}
+.name{margin:14px 0 12px;font-size:1.1rem;font-weight:500}
+.email{display:inline-block;background:var(--pill);color:#fff;text-decoration:none;font-size:1.15rem;padding:2px 14px;border-radius:14px;font-weight:500}
+.email:hover{background:#8f78c0}
+.email:focus-visible{outline-color:#000}
+.loc{margin:12px 0 0;font-size:.95rem;color:var(--muted)}
+.tag{margin:44px 0 0;font-style:italic;font-size:1rem}
+
+/* Nav */
+nav{border-bottom:1px solid var(--line);background:#fff}
+nav .wrap{display:flex;gap:28px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap;font-size:.92rem;font-weight:600}
+nav a{color:var(--ink);text-decoration:none}
+nav a:hover{color:var(--accent)}
+
+section{padding:64px 0 8px}
+h2{font-size:1.7rem;margin:0 0 20px;font-weight:800}
+
+/* About */
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:48px}
+.about p{margin:0 0 16px;max-width:64ch}
+.lead{font-size:1.15rem;font-weight:500}
+.facts{background:var(--card);border-left:4px solid var(--pill);padding:22px 24px;border-radius:0 12px 12px 0;align-self:start}
+.facts h3{margin:0 0 12px;font-size:1rem}
+.facts ul{margin:0;padding-left:18px}
+.facts li{margin-bottom:10px;font-size:.93rem}
+.facts strong{color:var(--accent)}
+.avail{margin-top:22px;padding:16px 20px;border:1px solid var(--line);border-radius:12px}
+.avail p{margin:0;font-size:.95rem}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
+.skills h3{margin:0 0 6px;font-size:.95rem}
+.skills p{margin:0;font-size:.92rem;color:var(--muted)}
+
+/* Experience */
+.job{padding:14px 0;border-top:1px solid var(--line)}
+.job h3{margin:0;font-size:1.02rem}
+.job .when{font-size:.88rem;color:var(--muted)}
+.job ul{margin:8px 0 0;padding-left:18px;font-size:.93rem}
+
+/* Projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
+.card{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line)}
+.cover{aspect-ratio:16/9;width:100%;object-fit:cover;display:block;background:linear-gradient(135deg,#3b2bb8,#a08bcb 60%,#e58fb0)}
+.card .body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 8px;font-size:1.05rem;line-height:1.35}
+.card p{margin:0 0 12px;font-size:.92rem}
+.impact{font-weight:600}
+.stack{margin:auto 0 16px;font-size:.82rem;color:var(--muted)}
+.btn{align-self:flex-start;background:var(--ink);color:#fff;text-decoration:none;padding:8px 18px;border-radius:999px;font-size:.88rem;font-weight:600}
+.btn:hover{background:var(--accent)}
+
+/* Contact */
+.contact{background:var(--header);margin-top:72px;padding:48px 0;text-align:center}
+.contact p{margin:0 auto 18px;max-width:52ch}
+.contact .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:18px;font-weight:600}
+footer{padding:20px;text-align:center;font-size:.82rem;color:var(--muted)}
+
+@media (max-width:760px){
+  .about{grid-template-columns:1fr;gap:28px}
+  header svg{opacity:.45;width:100%}
+  .head{padding-top:48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 
-    <header>
-        <!-- PASO 3: CAMBIA TU NOMBRE AQUÍ -->
-        <h1>María Fernanda Soní</h1>
-        <p>Data Analyst</p>
-    </header>
-
-    <div class="container">
-        <h2>Portafolio de Proyectos</h2>
-        <div class="projects-grid">
-            
-            <!-- TARJETA REPETIBLE (AQUÍ VAN LOS 7 PROYECTOS) -->
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-                <img src="https://placehold.co" alt="Project 1" class="project-image">
-                <div class="project-content">
-                    <h3>RappiPlus: From Data to Business Decisions</h3>
-                    <p>An end-to-end analysis evaluating RappiPlus's business performance — data quality, profitability, conversion funnel, cohort retention, an A/B test, and a BI dashboard — to support data-driven decisions.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python (pandas, NumPy, Matplotlib, statsmodels)</span>
-                        <span class="tag">SQL (PostgreSQL, vía SQLAlchemy)</span>
-                        <span class="tag">Power BI</span>
-                    </div>
-                    <a href="https://github.com/mfernandasoni/RappiPlus_from_data_to_business_decisions" class="btn" target="_blank">See Project</a>
-                </div>
-            </div>
-
-            <!-- Puedes copiar y pegar este bloque de arriba 7 veces, cambiando el número -->
-
-            <!-- PROJECT 2 -->
-            <div class="project-card">
-                <img src="https://placehold.co" alt="Project 2" class="project-image">
-                <div class="project-content">
-                    <h3>Process Control Across 7 Diaper and Training Pants Production Lines</h3>
-                    <p>To implement automated data capture via tablets and develop a dashboard for real-time monitoring of critical variables, enabling to detect anomalies and implement corrective actions.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Google Sheets</span>
-                        <span class="tag">Google Apps Script</span>
-                        <span class="tag">Power BI</span>
-                    </div>
-                    <a href="https://github.com/mfernandasoni/process-control" class="btn" target="_blank">See project</a>
-                </div>
-            </div>
-
-            <!-- PROJECT 3 -->
-            <div class="project-card">
-                <img src="https://placehold.co" alt="Project 3" class="project-image">
-                <div class="project-content">
-                    <h3>Real Estate Commercial Performance Dashboard for Grupo Andes</h3>
-                    <p>The real estate sector needs to evaluate its commercial performance to understand its growth, profitability, and customer behavior. The request is to build an executive dashboard that enables analysis of sales, customers, and properties to support data-driven strategic decisions.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Power BI (Power Query, DAX: CALENDAR, ADDCOLUMNS, CALCULATE, time intelligence functions)</span>
-                    </div>
-                    <a href="https://github.com/mfernandasoni/Commercial-Performance-Dashboard-for-Grupo-Andes-Real-State" class="btn" target="_blank">See project</a>
-                </div>
-            </div>
-
-            <!-- PROJECT 4 -->
-            <div class="project-card">
-                <img src="https://placehold.co" alt="Project 4" class="project-image">
-                <div class="project-content">
-                    <h3>Commercial Performance Dashboard for Andes Retail Group</h3>
-                    <p>A Tableau dashboard analyzing revenue evolution, profitability, and seasonality across regions, categories, and customer segments.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Tableau</span>
-                        <span class="tag">Excel</span>
-                    </div>
-                    <a href="https://github.com/mfernandasoni/commercial_performance_AndesRetail" class="btn" target="_blank">See project</a>
-                </div>
-            </div>
-
-            <!-- PROJECT 5 -->
-            <div class="project-card">
-                <img src="https://placehold.co" alt="Project 5" class="project-image">
-                <div class="project-content">
-                    <h3>Exploring Behavioral Factors at NovaRetail+</h3>
-                    <p>NovaRetail+ is an e-commerce platform in Latin America with millions of users. As of the close of 2024, the Growth and Retention team wanted to answer one question: which customer behavior factors are most strongly associated with the annual revenue a customer generates?</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python (pandas, NumPy, Seaborn, Matplotlib, SciPy)</span>
-                        <span class="tag">Jupyter Notebook</span>
-                    </div>
-                    <a href="https://github.com/mfernandasoni/Exploring_Behavioral_Factors_NovaRetail-" class="btn" target="_blank">See project</a>
-                </div>
-            </div>
-
-            <!-- PROJECT 6 -->
-            <div class="project-card">
-                <img src="https://placehold.co" alt="Project 6" class="project-image">
-                <div class="project-content">
-                    <h3>Urban Mobility and Economic Productivity in LATAM Cities</h3>
-                    <p>To identify which cities to invest in transportation infrastructure in order to improve productivity and population well-being.</p>
-                    <div class="tech-tags">
-                        <span class="tag">Python (pandas, NumPy, Seaborn, Matplotlib)</span>
-                        <span class="tag">Jupyter Notebook</span>
-                    </div>
-                    <a href="https://github.com/mfernandasoni/Urban-Mobility-and-Economic-Productivity-in-LATAM-Cities" class="btn" target="_blank">See project</a>
-                </div>
-            </div>
-
-            <!-- PROJECT 7 -->
-            <div class="project-card">
-                <img src="https://placehold.co" alt="Project 7" class="project-image">
-                <div class="project-content">
-                    <h3>Funnel and Retention Analysis for MercadoLibre</h3>
-                    <p>Map the full conversion. Identify key drop-off points, and evaluate user retention by cohorts.</p>
-                    <div class="tech-tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">Excel</span>
-                        <span class="tag">Funnel and metric analysis</span>
-                    </div>
-                    <a href="https://github.com/mfernandasoni/funnel-retention-analysis-MercadoLibre" class="btn" target="_blank">See project</a>
-                </div>
-            </div>
-
-
-        </div>
+<header>
+  <svg id="art" viewBox="0 0 400 320" preserveAspectRatio="xMinYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#35b8d0"/><stop offset=".35" stop-color="#4b30c8"/><stop offset="1" stop-color="#e58fb0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <div class="head">
+    <div class="head-inner">
+      <h1>Data Analyst</h1>
+      <p class="name">María Fernanda Soní</p>
+      <a class="email" href="mailto:m.fernanda.soni@gmail.com">m.fernanda.soni@gmail.com</a>
+      <p class="loc">Mexico</p>
+      <p class="tag">Turning messy data into clear insights and better processes</p>
     </div>
+  </div>
+</header>
 
-    <footer>
-        <p>Conectemos en <a href="https://www.linkedin.com/in/mariafernandasoni-data-analyst/" target="_blank">LinkedIn</a></p>
-    </footer>
+<nav aria-label="Sections">
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
+<main class="wrap">
+
+<section id="about">
+  <h2>About me</h2>
+  <div class="about">
+    <div>
+      <p class="lead">I'm a Data Analyst with a Mechatronics Engineering background who turns messy operational data into clear decisions.</p>
+      <p>My edge is pairing analytics with hands-on process optimization. Before moving into data full time, I worked inside manufacturing and customer quality operations, where I digitized paper-based tracking, built KPI dashboards, and automated weekly reporting. I know what the data looks like on the shop floor, and how to make it useful for the people who run it.</p>
+      <p>I work with SQL, Python (Pandas, NumPy, SciPy), Excel and Google Sheets, and I build dashboards in Power BI, Tableau and Looker Studio. My projects cover profitability, conversion funnels, cohort retention, A/B testing and executive reporting, each documented end to end in Jupyter Notebook and GitHub.</p>
+      <p>I communicate findings in plain language, back every recommendation with evidence, and work comfortably with cross-functional teams.</p>
+      <div class="avail">
+        <p><strong>Open to</strong> Data Analyst and Business Data Analyst roles, and to freelance projects such as dashboards, reporting automation, data cleaning and KPI tracking.</p>
+      </div>
+    </div>
+    <aside class="facts">
+      <h3>Results from my work</h3>
+      <ul>
+        <li><strong>1,000+</strong> annual quality complaints analyzed across 60-column datasets</li>
+        <li>Weekly report time cut from <strong>40 to 15 minutes</strong>, saving 16+ hours a month</li>
+        <li><strong>7 production lines</strong> digitized with real-time data capture</li>
+        <li><strong>300+</strong> process variables analyzed to set operational baselines</li>
+        <li><strong>$2.94M</strong> net profit identified in the RappiPlus strategic analysis</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Programming and databases</h3><p>SQL, Python, Pandas, NumPy, SciPy, CTEs, JOINs, cohort analysis, query optimization</p></div>
+    <div><h3>Data analysis</h3><p>Excel, Google Sheets, data cleaning, exploratory analysis, statistical and hypothesis testing, trend and anomaly detection</p></div>
+    <div><h3>Visualization and BI</h3><p>Power BI (Power Query, DAX), Tableau, Looker Studio, Matplotlib, Seaborn, Plotly</p></div>
+    <div><h3>Automation and methods</h3><p>Google Apps Script, process digitalization, Scrum, Daily Management System</p></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <h3>Data Analyst Certificate, TripleTen</h3>
+    <div class="when">March 2026 – September 2026</div>
+    <ul>
+      <li>Completed end-to-end analytics projects using SQL and Python, from cleaning and statistical testing to dashboards and stakeholder-ready conclusions.</li>
+      <li>Analyzed financial KPIs and user journeys to identify improvement opportunities.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Risk Analyst and Customer Service, Softys</h3>
+    <div class="when">June 2025 – February 2026</div>
+    <ul>
+      <li>Analyzed 1,000+ yearly quality and operational complaints to find recurring failures and guide root-cause corrective actions.</li>
+      <li>Automated weekly reporting in Google Sheets and launched a Looker Studio dashboard for cross-functional managers.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Jr. Process Control Quality Lead, Softys</h3>
+    <div class="when">July 2024 – May 2025</div>
+    <ul>
+      <li>Replaced paper tracking on 7 production lines with tablet forms built on Google Sheets and Apps Script, giving full traceability.</li>
+      <li>Built Power BI dashboards that turned shop-floor data into clear trends for operational leadership.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <h3>Education</h3>
+    <ul>
+      <li>Data Analyst Certificate, TripleTen (2026)</li>
+      <li>B.S. in Mechatronics Engineering, Tecnológico de Monterrey (2019 – 2023)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <article class="card">
+      <img class="cover" src="images/rappiplus.png" alt="RappiPlus project cover" loading="lazy" onerror="this.removeAttribute('src')">
+      <div class="body">
+        <h3>RappiPlus: From Data to Business Decisions</h3>
+        <p>An end-to-end analysis of profitability, conversion funnel, cohort retention and a checkout redesign A/B test.</p>
+        <p class="impact">Found $2.94M in net profit and pinpointed payment info as the main funnel bottleneck (86.71% conversion).</p>
+        <div class="stack">Python, SQL (PostgreSQL), Power BI, statsmodels</div>
+        <a class="btn" href="https://github.com/mfernandasoni/RappiPlus_from_data_to_business_decisions">View project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="cover" src="images/softys-process-control.png" alt="Process control dashboard cover" loading="lazy" onerror="this.removeAttribute('src')">
+      <div class="body">
+        <h3>Process Control Across 7 Diaper and Training Pants Production Lines</h3>
+        <p>Replaced paper audits with tablet-based data capture and a real-time dashboard to detect anomalies and trigger corrective actions.</p>
+        <p class="impact">Full traceability across 7 lines and 300+ variables monitored.</p>
+        <div class="stack">Google Sheets, Google Apps Script, Power BI</div>
+        <a class="btn" href="https://github.com/mfernandasoni/process-control">View project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="cover" src="images/grupo-andes.png" alt="Grupo Andes real estate dashboard cover" loading="lazy" onerror="this.removeAttribute('src')">
+      <div class="body">
+        <h3>Real Estate Commercial Performance Dashboard for Grupo Andes</h3>
+        <p>An executive dashboard on a star-schema model covering sales, customers, properties and customer cohorts.</p>
+        <p class="impact">Tracked $6.0B in sales and 11.1% year-over-year growth.</p>
+        <div class="stack">Power BI, Power Query, DAX</div>
+        <a class="btn" href="https://github.com/mfernandasoni/Commercial-Performance-Dashboard-for-Grupo-Andes-Real-State">View project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="cover" src="images/andes-retail.png" alt="Andes Retail Group Tableau dashboard cover" loading="lazy" onerror="this.removeAttribute('src')">
+      <div class="body">
+        <h3>Commercial Performance Dashboard for Andes Retail Group</h3>
+        <p>A Tableau dashboard explaining revenue evolution, profitability and seasonality across regions, categories and segments.</p>
+        <p class="impact">Traced the 2025 revenue decline to specific months, not a general trend.</p>
+        <div class="stack">Tableau, Excel</div>
+        <a class="btn" href="https://github.com/mfernandasoni/commercial_performance_AndesRetail">View project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="cover" src="images/novaretail.png" alt="NovaRetail+ analysis cover" loading="lazy" onerror="this.removeAttribute('src')">
+      <div class="body">
+        <h3>Exploring Behavioral Factors at NovaRetail+</h3>
+        <p>A correlation study of 15,000 customers to find which behaviors are most associated with annual revenue.</p>
+        <p class="impact">Monthly purchases showed the strongest link to revenue (Pearson ≈ 0.97).</p>
+        <div class="stack">Python, Pandas, SciPy, Seaborn, Jupyter</div>
+        <a class="btn" href="https://github.com/mfernandasoni/Exploring_Behavioral_Factors_NovaRetail-">View project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="cover" src="images/urban-mobility.png" alt="Urban mobility in LATAM cover" loading="lazy" onerror="this.removeAttribute('src')">
+      <div class="body">
+        <h3>Urban Mobility and Economic Productivity in LATAM Cities</h3>
+        <p>Combined traffic, GDP and unemployment data to decide where transport infrastructure investment matters most.</p>
+        <p class="impact">Identified Bogotá as the priority city: high congestion, moderate productivity, 11.3M inhabitants.</p>
+        <div class="stack">Python, Pandas, Seaborn, Matplotlib, Jupyter</div>
+        <a class="btn" href="https://github.com/mfernandasoni/Urban-Mobility-and-Economic-Productivity-in-LATAM-Cities">View project</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="cover" src="images/mercadolibre.png" alt="MercadoLibre funnel analysis cover" loading="lazy" onerror="this.removeAttribute('src')">
+      <div class="body">
+        <h3>Funnel and Retention Analysis for MercadoLibre</h3>
+        <p>Mapped the full purchase funnel, located the main drop-off points and measured retention by cohort.</p>
+        <p class="impact">Delivered actionable recommendations on critical funnel stages and retention.</p>
+        <div class="stack">SQL, Excel, funnel and metric analysis</div>
+        <a class="btn" href="https://github.com/mfernandasoni/funnel-retention-analysis-MercadoLibre">View project</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's work together</h2>
+    <p>Hiring for a data role or need help with a dashboard, a report or messy data? Send me a message.</p>
+    <a class="email" href="mailto:m.fernanda.soni@gmail.com">m.fernanda.soni@gmail.com</a>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/mariafernandasoni-data-analyst/">LinkedIn</a>
+      <a href="https://github.com/mfernandasoni">GitHub</a>
+    </div>
+  </div>
+</section>
+<footer>© 2026 María Fernanda Soní</footer>
+
+<script>
+/* Decorative line art for the header */
+(function(){
+  var svg=document.getElementById('art'),ns='http://www.w3.org/2000/svg',h='';
+  for(var i=0;i<34;i++){
+    var t=i*3.2;
+    h+='<path d="M'+(10+t)+' 320 C'+(40+t)+' 200 '+(120+t*.6)+' 40 '+(150+t*.4)+' 30 S'+(190+t)+' 150 '+(260+t*.5)+' 240 S'+(330+t*.3)+' 300 '+(400)+' 300" fill="none" stroke="url(#g)" stroke-width=".8" opacity="'+(0.85-i*0.015).toFixed(2)+'"/>';
+  }
+  svg.insertAdjacentHTML('beforeend',h);
+})();
+</script>
 </body>
 </html>
