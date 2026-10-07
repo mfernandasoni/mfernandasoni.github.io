@@ -23,7 +23,11 @@ a:focus-visible{outline:3px solid var(--pill);outline-offset:3px}
 /* Header */
 header{background:var(--header);position:relative;overflow:hidden}
 header svg{position:absolute;left:0;top:0;height:100%;width:46%;min-width:300px}
-.head{position:relative;display:flex;justify-content:flex-end;padding:64px 24px 40px}
+.head{position:relative;display:flex;justify-content:flex-end;align-items:center;gap:40px;padding:56px 24px 40px}
+.photo{width:170px;height:170px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 6px 24px rgba(75,48,200,.25);flex:none;background:var(--pill)}
+.cv{display:inline-block;margin-top:18px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;padding:9px 22px;border-radius:999px}
+.cv:hover{background:var(--accent)}
+.cv:focus-visible{outline-color:#000}
 .head-inner{text-align:right;max-width:560px}
 .head h1{margin:0;font-size:clamp(2.2rem,5vw,3.2rem);font-weight:800;line-height:1.1;color:#000}
 .name{margin:14px 0 12px;font-size:1.1rem;font-weight:500}
@@ -66,6 +70,7 @@ h2{font-size:1.7rem;margin:0 0 20px;font-weight:800}
 .job ul{margin:8px 0 0;padding-left:18px;font-size:.93rem}
 
 /* Projects */
+.proj-intro{max-width:72ch;margin:0 0 28px;font-size:1rem;color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px}
 .card{background:var(--card);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line)}
 .cover{aspect-ratio:16/9;width:100%;object-fit:cover;display:block;background:linear-gradient(135deg,#3b2bb8,#a08bcb 60%,#e58fb0)}
@@ -86,7 +91,9 @@ footer{padding:20px;text-align:center;font-size:.82rem;color:var(--muted)}
 @media (max-width:760px){
   .about{grid-template-columns:1fr;gap:28px}
   header svg{opacity:.45;width:100%}
-  .head{padding-top:48px}
+  .head{padding-top:40px;flex-direction:column;gap:24px}
+  .head-inner{text-align:center}
+  .photo{width:140px;height:140px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -102,11 +109,13 @@ footer{padding:20px;text-align:center;font-size:.82rem;color:var(--muted)}
     </defs>
   </svg>
   <div class="head">
+    <img class="photo" src="images/profile.jpg" alt="Portrait of María Fernanda Soní" width="170" height="170" onerror="this.style.display='none'">
     <div class="head-inner">
       <h1>Data Analyst</h1>
       <p class="name">María Fernanda Soní</p>
       <a class="email" href="mailto:m.fernanda.soni@gmail.com">m.fernanda.soni@gmail.com</a>
       <p class="loc">Mexico</p>
+      <a class="cv" href="assets/CV_MariaFernanda_Soni_DA.pdf" download>Download CV</a>
       <p class="tag">Turning messy data into clear insights and better processes</p>
     </div>
   </div>
@@ -188,11 +197,7 @@ footer{padding:20px;text-align:center;font-size:.82rem;color:var(--muted)}
 
 <section id="projects">
   <h2>Projects</h2>
-  <div class="job">
-      <li>Completed end-to-end analytics projects using SQL and Python, from cleaning and statistical testing to dashboards and stakeholder-ready conclusions.</li>
-      <li>Analyzed financial KPIs and user journeys to identify improvement opportunities.</li>
-    </ul>
-  </div>
+  <p class="proj-intro">End-to-end analytics projects built with SQL and Python, from data cleaning and statistical testing to dashboards and stakeholder-ready conclusions. I analyze financial KPIs and user journeys to uncover concrete opportunities for improvement. Most were completed during my Data Analyst Certificate at TripleTen, and the process-control project comes from my work at Softys.</p>
   <div class="grid">
 
     <article class="card">
